@@ -1,0 +1,31 @@
+<h1>Generador de Números Aleatorios</h1>
+
+<h2>Método de Congruencia Lineal</h2>
+
+<%=form_for(@gna,:url=>generate_random_gna_index_path,:method=>:post,:remote=>true) do |f|%>
+	<fieldset>
+      <legend><%=t('.gna_legend')%></legend>
+      <dl class="inline">
+      	<dt><%=f.label :multiplier_a, 'Multiplier (a)'%></dt>
+		<dd>
+          <%= f.text_field :multiplier_a, :class=>"medium validate[#{set_validate(false)}]",:size=>50 %>
+        </dd>
+		<dt><%=f.label :constant_c, 'Constant (c)'%></dt>
+		<dd>
+          <%= f.text_field :constant_c, :class=>"medium validate[#{set_validate(false)}]",:size=>50 %>
+        </dd>
+		<dt><%=f.label :module_m,'Module (m)'%></dt>
+		<dd>
+          <%= f.text_field :module_m, :class=>"medium validate[#{set_validate(false)}]",:size=>50 %>
+        </dd>
+		<dt><%=f.label :seed_xo,'Seed (Xo)'%></dt>
+		<dd>
+          <%= f.text_field :seed_xo, :class=>"medium validate[#{set_validate(false)}]",:size=>50 %>
+        </dd>
+      </dl>
+    </fieldset>
+  	<%=f.submit t('buttons.save'), :disable_with => t('buttons.processing'), :class => "btn btn-success"%>  
+<%end%>
+
+<div id="div_results">
+</div>

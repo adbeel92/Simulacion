@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  multiplier_a: 
+  constant_c: 
+  module_m: 
+  seed_xo: 
+
+two:
+  multiplier_a: 
+  constant_c: 
+  module_m: 
+  seed_xo: 
